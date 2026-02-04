@@ -1,61 +1,38 @@
-import { Link, useNavigate } from "react-router-dom";
 import useLang from "../../Utils/useLang";
+import "./NotFound.css";
 const NotFound = () => {
-  const navigate = useNavigate();
   return (
-    <div
-      className="d-flex align-items-center justify-content-center px-4"
-      style={{ height: "80vh" }}
-    >
-      <div className="text-center" style={{ maxWidth: "28rem" }}>
-        {/* Large 404 */}
-        <div className="mb-4">
-          <h1 className="display-1  text-dark mb-3">404</h1>
-          <div
-            className="mx-auto"
-            style={{
-              width: "6rem",
-              height: "4px",
-              backgroundColor: "var(--identity-color)",
-            }}
-          ></div>
+    <div className="not-found-container">
+      <div className="not-found-content">
+        <div className="not-found-illustration">
+          <div className="error-code">404</div>
+          <div className="error-icon">
+            <svg
+              width="120"
+              height="120"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"
+                fill="currentColor"
+                opacity="0.3"
+              />
+            </svg>
+          </div>
         </div>
 
-        {/* Message */}
-        <div className="mb-4">
-          <h2 className="h2 fw-semibold text-dark mb-3 text-capitalize">
-            {useLang("page not found", "الصفحة غير موجودة")}
-          </h2>
-          <p className="text-muted lead">
+        <div className="not-found-text">
+          <h1 className="not-found-title text-capitalize">
+            {useLang("Page Not Found", "الصفحة غير موجودة")}
+          </h1>
+          <p className="not-found-description">
             {useLang(
-              " Sorry, the page you are looking for doesn't exist",
-              "عذراً، الصفحة التي تبحث عنها غير موجودة ."
+              "The page you're looking for doesn't exist or has been moved. Please check the URL",
+              "الصفحة التي تبحث عنها غير موجودة أو تم نقلها. يرجى التحقق من الرابط",
             )}
           </p>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="d-grid gap-3">
-          <Link
-            to={`/${"?lang=" + useLang("en", "ar")}`}
-            className="btn btn-lg d-flex align-items-center justify-content-center gap-2 text-capitalize"
-            style={{
-              backgroundColor: "var(--main-color)",
-              color: "var(--white-color)",
-            }}
-          >
-            <i className="bi bi-house-door-fill"></i>
-            {useLang("go home", "الصفحة الرئيسية")}
-          </Link>
-
-          <button
-            onClick={() => navigate(-1)}
-            className="btn btn-lg d-flex align-items-center justify-content-center gap-2  text-capitalize"
-            style={{ backgroundColor: "#787878", color: "var(--white-color)" }}
-          >
-            <i className="bi bi-arrow-left"></i>
-            {useLang("go back", "العودة")}
-          </button>
         </div>
       </div>
     </div>

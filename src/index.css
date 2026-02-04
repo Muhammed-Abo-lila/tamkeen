@@ -18,17 +18,6 @@
   --fs-5: clamp(0.875rem, 1.2vw, 1rem);
   --fs-6: 0.875rem;
 }
-html[data-company="jabalomar"] {
-  --main-color: #374c5f;
-  --bg-light: #9da07c;
-  --link-color: #374c5f;
-}
-html[data-company="smasco"] {
-  --main-color: #00a164;
-  --light-main-color: #00a164;
-  --link-color: #4b4b4b;
-  --border-color: #dee2e6;
-}
 /* ######################################################### */
 body {
   color: #000;

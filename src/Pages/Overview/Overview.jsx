@@ -8,12 +8,10 @@ import Events from "./OverviewSubSections/Events";
 import CorporateActions from "./OverviewSubSections/CorporateActions";
 import MetaComp from "../../Layout/MetaComp/MetaComp";
 import "./Overview.css";
-import useLang from "../../Utils/useLang";
 function Overview() {
-
   return (
     <div className="overview row mt-4">
-      <MetaComp title={useLang("Tamkeen || Investor Relations","تمكين || علاقات المستثمرين")}/>
+      <MetaComp/>
       <div className="col-md-6">
         <Chart />
         <LatestNews />

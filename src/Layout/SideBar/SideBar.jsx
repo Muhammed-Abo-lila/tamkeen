@@ -5,47 +5,47 @@ function SideBar() {
   const currentLang = useLang("en", "ar");
   const Links = [
     { title: useLang("overview", "معلومات الشركة"), to: "" },
-    { title: useLang("profile", "ملف الشركة"), to: "/profile" },
+    { title: useLang("profile", "ملف الشركة"), to: `profile` },
     {
       title: useLang("board & executives", "مجلس الإدارة والمدراء التنفيذيون"),
-      to: "/board",
+      to: `board`,
     },
     {
       title: useLang("share performance", "أداء السهم"),
-      to: "/share-performance",
+      to: `share-performance`,
     },
     {
       title: useLang("financial information", "البيانات المالية"),
-      to: "/financial-information",
+      to: `financial-information`,
     },
     {
       title: useLang("investors presentation", "عرض المستثمرين"),
-      to: "/investors-presentation",
+      to: `investors-presentation`,
     },
-    { title: useLang("disclosures", "الإفصاحات"), to: "/disclosures" },
+    { title: useLang("disclosures", "الإفصاحات"), to: `disclosures` },
     {
       title: useLang("corporate actions", "إجراءات الشركة"),
-      to: "/corporate-actions",
+      to: `corporate-actions`,
     },
     {
       title: useLang("major shareholders", "كبار المساهمين"),
-      to: "/major-shareholders",
+      to: `major-shareholders`,
     },
     {
       title: useLang("business segments", "التحليل القطاعي"),
-      to: "/business-segments",
+      to: `business-segments`,
     },
     {
       title: useLang("mergers & acquisitions", "الدمج والاستحواذ"),
-      to: "/mergers-acquisitions",
+      to: `mergers-acquisitions`,
     },
-    { title: useLang("contact IR", "تواصل مع الشركة"), to: "/contact" },
+    { title: useLang("contact IR", "تواصل مع الشركة"), to: `contact` },
   ];
   return (
     <>
       {/* sidebar in large screens*/}
       <div
-        className="sidebar d-none d-lg-block  w-100"
+        className="sidebar d-none d-lg-block w-100"
         style={{ height: "fit-content" }}
       >
         <ul className="list-unstyled m-0 p-0">
@@ -56,7 +56,6 @@ function SideBar() {
                   pathname: `${item.to}`,
                   search: `?lang=${currentLang}`,
                 }}
-                // to={`${item?.to}?lang=${useLang("en", "ar")}`}
                 className={`w-100 d-block py-2 px-2 text-capitalize`}
                 style={{ fontSize: "13px" }}
           
