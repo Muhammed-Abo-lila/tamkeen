@@ -4,7 +4,7 @@ import APIS from "../../services/APIS";
 import { useMemo } from "react";
 import SkeletonTable from "../../Components/UI/SkeletonTable/SkeletonTable";
 import { Outlet, useParams } from "react-router-dom";
-import "./board.css";
+import "./Board.css";
 import NestedNavs from "../../Components/Common/nestedNavs/NestedNavs";
 const Board = () => {
   const{id}=useParams()
