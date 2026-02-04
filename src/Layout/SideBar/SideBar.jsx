@@ -56,6 +56,7 @@ function SideBar() {
                   pathname: `${item.to}`,
                   search: `?lang=${currentLang}`,
                 }}
+                end={item.to === ""}
                 className={`w-100 d-block py-2 px-2 text-capitalize`}
                 style={{ fontSize: "13px" }}
           

@@ -16,7 +16,7 @@ const MetaComp = () => {
       <meta property="og:title" content="Facebook – WhatsApp – LinkedIn" />
       <meta property="og:description" content="Charts, earnings, and key financial data" />
       <meta property="og:image" content={metaTags?.favIco}/>
-      <meta property="og:url" content={`http://localhost:5173/${companies[company]?.name}?lang=${useLang("en","ar")}`} />
+      <meta property="og:url" content={`https://test-ir.argaam-ir.com/${companies[company]?.name}?lang=${useLang("en","ar")}`} />
       <meta property="og:type" content="website" />
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
