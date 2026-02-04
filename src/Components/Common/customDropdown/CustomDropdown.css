@@ -1,0 +1,29 @@
+.custom-dropdown .dropdown {
+  border: 1px solid var(--main-color);
+  padding: 10px;
+}
+.custom-dropdown .dropdown .dropdown-toggle {
+  min-width: 70px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.custom-dropdown .dropdown .dropdown-toggle::after {
+  content: none;
+}
+.custom-dropdown .dropdown .dropdown-menu {
+  transform: translate3d(0px, 35px, 0px) !important;
+  text-align: center;
+  min-width: 95px !important;
+  min-width: fit-content;
+}
+.custom-dropdown .dropdown .dropdown-menu li {
+  cursor: pointer;
+  padding: 5px 0px;
+  transition: all 0.3s ease-in-out;
+}
+.custom-dropdown .dropdown .dropdown-menu li:hover {
+  color: var(--white-color);
+  background-color: var(--main-color);
+}

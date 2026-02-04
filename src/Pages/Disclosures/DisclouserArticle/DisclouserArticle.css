@@ -1,0 +1,31 @@
+.disclouser-article img {
+  border-radius: 10px;
+  width: 100% !important;
+  height: unset !important;
+  max-height: 350px !important;
+  object-fit: contain !important;
+}
+
+.disclouser-article a img {
+  width: 25px !important;
+}
+
+.disclouser-article table {
+  width: 100% !important;
+}
+.disclouser-article span,
+.disclouser-article div,
+.disclouser-article a,
+.disclouser-article table {
+  font-size: 14px !important;
+}
+.disclouser-article p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.disclouser-article {
+  overflow: hidden;
+}
+.disclouser-article .ckeCaption{
+  display: none;
+}

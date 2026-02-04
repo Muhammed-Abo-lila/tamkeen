@@ -1,0 +1,25 @@
+.footer {
+  backdrop-filter: blur(15px);
+}
+.footer .powerd-by {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: black;
+  transition: 0.3s;
+  margin: 0 5px;
+}
+.footer .powerd-by:hover {
+  color: rgba(0, 0, 0, 0.651);
+}
+
+.footer .argaam {
+  transition: 0.4s;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: 0.4s;
+  margin: 0 5px;
+  border-bottom: 1px solid transparent;
+}
+.footer .argaam:hover {
+  border-bottom: 1px solid var(--main-color);
+}

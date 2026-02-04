@@ -1,0 +1,56 @@
+.salaries-bar {
+  position: relative;
+}
+.salaries-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  z-index: -1;
+}
+.salaries-bar .salary-bar-item {
+  background-color: var(--white-color);
+}
+.salaries-bar .salary-bar-item {
+  padding: 10px;
+  font-size: var(--fs-4);
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+}
+.salaries-bar .salary-bar-item:hover {
+  color: var(--main-color);
+}
+.salaries-bar .salary-bar-item.active {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border-radius: 8px;
+  font-weight: 600;
+}
+.salaries-bar .salary-bar-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 14px solid var(--main-color);
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 576px) {
+  .salaries-bar .salary-bar-item {
+    padding: 7px;
+    font-size: var(--fs-5);
+  }
+  .salaries-bar .salary-bar-item.active {
+    font-weight: 800;
+  }
+  .salaries-bar .salary-bar-item.active::after {
+    bottom: -9px;
+    border-top: 10px solid var(--main-color);
+  }
+}

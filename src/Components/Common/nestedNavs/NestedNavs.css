@@ -1,0 +1,8 @@
+.nested-tabs a ,
+.nested-tabs div{
+  border-bottom: 2px solid transparent;
+}
+.nested-tabs .active {
+  width: fit-content;
+  border-bottom: 2px solid var(--main-color);
+}

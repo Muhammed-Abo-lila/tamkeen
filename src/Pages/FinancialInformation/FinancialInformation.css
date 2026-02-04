@@ -1,0 +1,23 @@
+.accordion-button:not(.collapsed) {
+  background-color: var(--main-color) !important;
+  color: var(--white-color) !important;
+  box-shadow: none;
+}
+.accordion-button.collapsed {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.accordion .accordion-item .accordion-button:focus {
+  border-color: var(--main-color) !important;
+  box-shadow: var(--main-color) !important;
+} 
+
+.accordion .accordion-item .accordion-button::after {
+background-size: 1rem;
+}
+
+[dir="rtl"] .accordion-button::after {
+  margin-right: auto !important;
+  margin-left: 0px;
+}
+

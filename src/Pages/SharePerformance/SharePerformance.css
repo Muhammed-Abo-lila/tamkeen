@@ -1,0 +1,28 @@
+[dir="rtl"] .peers-check-box .form-check-input {
+  float: right !important;
+  margin-left: 0.5rem !important;
+}
+
+.form-check-input:checked {
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+}
+
+.form-check-input:focus {
+  box-shadow: none !important;
+  border-color: #dee2e6 !important;
+}
+
+
+.investment-calculator .show-results-btn {
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border: 1px solid var(--main-color);
+  transition: 0.4s ease;
+}
+
+.investment-calculator .show-results-btn:hover {
+  color: var(--main-color);
+  background-color: var(--white-color);
+}

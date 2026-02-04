@@ -1,0 +1,36 @@
+@media screen and (min-width: 1199px) {
+  .overview .trade-mark-section .trade-mark-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 6px;
+  }
+  .overview .trade-mark-section .trade-mark-item:last-of-type {
+    border-bottom: none;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .overview .trade-mark-section .trade-mark-item div {
+    border-bottom: 1px solid var(--border-color);
+    padding: 6px;
+  }
+  .overview .trade-mark-section .trade-mark-item:last-of-type div:last-of-type {
+    border-bottom: none;
+  }
+}
+@media screen and (min-width: 575px) and (max-width: 767px) {
+  .overview .trade-mark-section .trade-mark-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 6px;
+  }
+  .overview .trade-mark-section .trade-mark-item:last-of-type {
+    border-bottom: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .overview .trade-mark-section .trade-mark-item div {
+    border-bottom: 1px solid var(--border-color);
+    padding: 6px;
+  }
+  .overview .trade-mark-section .trade-mark-item:last-of-type div:last-of-type {
+    border-bottom: none;
+  }
+}
