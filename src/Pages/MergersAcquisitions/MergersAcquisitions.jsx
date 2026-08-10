@@ -9,6 +9,8 @@ function MergersAcquisitions() {
     [APIS?.MERGERS?.KEY],
     APIS?.MERGERS?.URL
   );
+  console.log("data=>",data);
+  
   const tableHead = [
     {
       label: useLang("date", "التاريخ"),

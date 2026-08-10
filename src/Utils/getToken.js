@@ -1,5 +1,4 @@
 import axios from "axios";
-import { companies } from "../services/COMPANIES.JS";
 function isTokenValid(token) {
   if (!token) return false;
   try {
@@ -10,19 +9,14 @@ function isTokenValid(token) {
 }
 export async function authenticateAndSaveToken() {
   const base_url = "https://data.argaam.com";
-  const company = window.location.pathname.split("/")[1];
-  const companyData = companies[`${company}`];
-  const companyDataFromLocalStorage = sessionStorage.getItem("company");
-  if (company === companyDataFromLocalStorage) {
-    const existingToken = JSON.parse(sessionStorage.getItem("authToken"));
-    if (isTokenValid(existingToken)) {
-      return existingToken?.token;
-    }
+  const existingToken = JSON.parse(sessionStorage.getItem("authToken"));
+  if (isTokenValid(existingToken)) {
+    return existingToken?.token;
   }
   try {
     const response = await axios.post(`${base_url}/authenticate`, {
-      username: companyData?.username,
-      password: companyData?.password,
+      username: "SMASCO-IR",
+      password: "SMQ0YTNj1YTllOMjI0M2JhNm7Y5ND7x9urTg3NW/RlO4TcyY2JlMGE==",
     });
     const data = response.data;
     if (data) {

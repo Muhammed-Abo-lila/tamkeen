@@ -6,12 +6,10 @@ import MarketData from "./OverviewSubSections/MarketData";
 import FinancialRatios from "./OverviewSubSections/FinancialRatios";
 import Events from "./OverviewSubSections/Events";
 import CorporateActions from "./OverviewSubSections/CorporateActions";
-import MetaComp from "../../Layout/MetaComp/MetaComp";
 import "./Overview.css";
 function Overview() {
   return (
     <div className="overview row mt-4">
-      <MetaComp/>
       <div className="col-md-6">
         <Chart />
         <LatestNews />

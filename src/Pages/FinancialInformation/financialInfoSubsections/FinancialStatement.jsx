@@ -7,6 +7,7 @@ import {
   changeCurrencyFromRiyalToDollar,
   colorAndBgColorDependOnNumber,
   exportToExcel,
+  formatDate,
   formatNumber,
 } from "../../../Utils/helpers";
 import useLang from "../../../Utils/useLang";
@@ -146,7 +147,7 @@ function FinancialStatement() {
               />
               <CustomTd label={useLang("Chart", "تشارت")} />
               {lastFiveYears?.map((item, idx) => (
-                <CustomTd key={idx} label={item?.fiscalPeriod} />
+                <CustomTd key={idx} label={activeTab?.tab==="quarter"?formatDate(item?.forDate):item?.forDate} />
               ))}
             </tr>
           </thead>
@@ -209,8 +210,8 @@ function FinancialStatement() {
                       }}
                       label={formatNumber(
                         choosenCurrency.value === "sar"
-                          ? item?.value
-                          : changeCurrencyFromRiyalToDollar(item?.value)
+                          ? item?.value||"-"
+                          : changeCurrencyFromRiyalToDollar(item?.value)||"-"
                       )}
                     />
                   ))}

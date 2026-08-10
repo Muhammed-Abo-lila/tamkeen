@@ -49,8 +49,7 @@ function BusinessSegments() {
 
   const { data, isLoading } = useRequest(
     [APIS?.BUSINESS_SEGMENTS?.KEY, activeTab?.tab],
-    `${APIS?.BUSINESS_SEGMENTS?.URL}${
-      activeTab?.tab == "annual" ? "year" : "quarter"
+    `${APIS?.BUSINESS_SEGMENTS?.URL}${activeTab?.tab == "annual" ? "year" : "quarter"
     }`
   );
 
@@ -88,11 +87,9 @@ function BusinessSegments() {
       isInterm: false,
       currencyId: choosenCurrency.value == "sar" ? 3 : 10,
     };
-    const fileName = `business-segments-${
-      activeTab?.tab == "annual" ? "yearly" : "quarterly"
-    }-${allYears[allYears.length - 1]}-${allYears[0]}-${useLang("en", "ar")}-${
-      choosenCurrency.value
-    }.xlsx`;
+    const fileName = `business-segments-${activeTab?.tab == "annual" ? "yearly" : "quarterly"
+      }-${allYears[allYears.length - 1]}-${allYears[0]}-${useLang("en", "ar")}-${choosenCurrency.value
+      }.xlsx`;
     await exportToExcel("get-business-segment", formData, fileName);
   };
 
@@ -159,12 +156,12 @@ function BusinessSegments() {
             {useLang(field?.fsFieldNameEn, field?.fsFieldNameAr)}
           </h2>
 
-          <table className="table table-hover custom-fs-6 ">
+          <table className="table table-hover custom-fs-6" style={{ tableLayout: "fixed", width: "100%" }}>
             <thead className="table-light">
               <tr>
                 <CustomTd
                   label={useLang("Fiscal Period", "الفترة المالية")}
-                  colSpan="2"
+                  colSpan="3"
                   isCentered={false}
                   height="30px"
                   lineHeight="30px"
@@ -173,7 +170,7 @@ function BusinessSegments() {
                   <CustomTd
                     key={idx}
                     label={item}
-                    isCentered={activeTab?.tab === "quarter"}
+                    // isCentered={activeTab?.tab === "quarter"}
                     height="30px"
                     lineHeight="30px"
                   />
@@ -181,13 +178,13 @@ function BusinessSegments() {
               </tr>
 
               <tr>
-                <CustomTd colSpan="2" height="30px" lineHeight="30px" />
+                <CustomTd colSpan="3" height="30px" lineHeight="30px" />
 
                 {allYears?.map((_, idx) => (
                   <CustomTd
                     key={idx}
                     label={choosenCurrency?.label}
-                    isCentered={activeTab?.tab === "quarter"}
+                    // isCentered={activeTab?.tab === "quarter"}
                     height="30px"
                     lineHeight="30px"
                   />
@@ -202,6 +199,7 @@ function BusinessSegments() {
                   isCentered={false}
                   height="30px"
                   lineHeight="30px"
+                  colSpan={2}
                 />
 
                 <CustomTd
@@ -214,11 +212,11 @@ function BusinessSegments() {
                 {allYears?.map((year, idx) => (
                   <CustomTd
                     key={idx}
-                    isCentered={activeTab?.tab === "quarter"}
+                    // isCentered={activeTab?.tab === "quarter"}
                     height="30px"
                     lineHeight="30px"
                   >
-                    <div className={useLang("ms-1","me-1")}>
+                    <div className={useLang("ms-1", "me-1")}>
                       <svg
                         className="highlights-chart"
                         data-bs-toggle="modal"
@@ -297,6 +295,7 @@ function BusinessSegments() {
                     isCentered={false}
                     height="30px"
                     lineHeight="30px"
+                    colSpan={2}
                   />
                   <CustomTd
                     isCentered={activeTab?.tab === "quarter"}
@@ -332,13 +331,13 @@ function BusinessSegments() {
                       key={idx}
                       label={formatNumber(
                         choosenCurrency?.value === "sar"
-                          ? value?.value
-                          : changeCurrencyFromRiyalToDollar(value?.value)
+                          ? value?.value || "-"
+                          : changeCurrencyFromRiyalToDollar(value?.value) || "-"
                       )}
                       style={{
                         color: colorAndBgColorDependOnNumber(value?.value),
                       }}
-                      isCentered={activeTab?.tab === "quarter"}
+
                       height="30px"
                       lineHeight="30px"
                     />

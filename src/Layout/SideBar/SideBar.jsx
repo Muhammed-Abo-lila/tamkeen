@@ -35,10 +35,10 @@ function SideBar() {
       title: useLang("business segments", "التحليل القطاعي"),
       to: `business-segments`,
     },
-    {
-      title: useLang("mergers & acquisitions", "الدمج والاستحواذ"),
-      to: `mergers-acquisitions`,
-    },
+    // {
+    //   title: useLang("mergers & acquisitions", "الدمج والاستحواذ"),
+    //   to: `mergers-acquisitions`,
+    // },
     { title: useLang("contact IR", "تواصل مع الشركة"), to: `contact` },
   ];
   return (

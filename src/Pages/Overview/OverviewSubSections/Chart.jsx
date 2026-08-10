@@ -9,7 +9,6 @@ import useLang from "../../../Utils/useLang";
 import CustomHr from "../../../Components/Common/customHr/CustomHr";
 // handle access of heighCharts
 HighchartsMore(Highcharts);
-
 function Chart() {
   // get ticker Chart Data
   const { data, isLoading } = useRequest(
@@ -24,17 +23,16 @@ function Chart() {
     accessibility: { enabled: false },
     credits: { enabled: false },
     stockTools: { gui: { enabled: false } },
-
     // Gredient colors
     plotOptions: {
       series: {
         fillColor: {
           linearGradient: [0, 0, 0, 250],
           stops: [
-            [0, Highcharts.getOptions().colors[4]],
+            [0, "#009CAD"],
             [
               1,
-              Highcharts.color(Highcharts.getOptions().colors[4])
+              Highcharts.color("#009CAD")
                 .setOpacity(0)
                 .get("rgba"),
             ],
@@ -42,7 +40,6 @@ function Chart() {
         },
       },
     },
-
     series: [
       {
         data:
@@ -57,7 +54,7 @@ function Chart() {
         type: "areaspline",
         threshold: null,
         turboThreshold: 2400,
-        color: Highcharts.getOptions().colors[4],
+        color: "#009CAD",
       },
     ],
     // Tooltip formatting
@@ -71,7 +68,6 @@ function Chart() {
       },
     },
   };
-
   return (
     <div className="border border-top-0 ">
       <h2 className="section-title overview-sections-title">

@@ -10,7 +10,7 @@ const CustomDropdown = ({label,list,choosenValue,setChoosenValue}) => {
             </div>
             <ul className="dropdown-menu">
               {list?.map((item,idx)=>
-                <li key={idx} onClick={()=>setChoosenValue(item)}>{item?.label}</li>
+                <li key={idx} onClick={()=>setChoosenValue(item)}>{item?.value||item?.label}</li>
               )}
             </ul>
           </div>

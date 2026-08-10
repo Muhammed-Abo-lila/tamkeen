@@ -6,7 +6,7 @@ const ContactIR = () => {
   //  <MdMarkEmailRead color="#49cae4" size="30" className="mx-2" />
   return (
     <ul className="list-unstyled mt-5 text-capitalize custom-fs-2">
-      <li className="mb-4">
+      {/* <li className="mb-4">
         <i
           className="bi bi-person-lines-fill mx-3"
           style={{ color: "var(--main-color)" }}
@@ -15,7 +15,7 @@ const ContactIR = () => {
           "investor relations contact",
           "معلومات التواصل لعلاقات المستثمرين"
         )}
-      </li>
+      </li> */}
 
       <li className="mb-4">
         <i
@@ -23,7 +23,7 @@ const ContactIR = () => {
           style={{ color: "var(--main-color)" }}
         ></i>
         <a
-          href="tel:0112990415"
+          href="tel:0556676751"
           style={{
             direction: "ltr",
             display: "inline-block",
@@ -31,7 +31,7 @@ const ContactIR = () => {
             color: "inherit",
           }}
         >
-          0112990415
+          0112247001, Ext: 5000
         </a>
       </li>
 
@@ -41,10 +41,10 @@ const ContactIR = () => {
           style={{ color: "var(--main-color)" }}
         ></i>
         <a
-          href="mailto:IR@tamkeenhr.com"
+          href="mailto:investor.relations@smasco.com"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          IR@tamkeenhr.com
+          investor.relations@smasco.com
         </a>
       </li>
     </ul>

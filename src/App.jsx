@@ -15,7 +15,6 @@ import BoardTab from "./Pages/BoardManagement/BoardSubSections/BoardTab";
 import ExecutivesTab from "./Pages/BoardManagement/BoardSubSections/ExecutivesTab";
 import SalariesTab from "./Pages/BoardManagement/BoardSubSections/SalariesTab";
 import MemeberDetails from "./Pages/BoardManagement/BoardSubSections/MemberDetails";
-import { companies } from "./services/COMPANIES.JS";
 // Lazy load page components
 const Overview = lazy(() => import("./Pages/Overview/Overview"));
 const Profile = lazy(() => import("./Pages/Profile/Profile"));
@@ -126,24 +125,6 @@ const LangRedirect = () => {
 };
 // Wrapper component for Layout with language check
 const LayoutWrapper = () => {
-  const { company } = useParams();
-  const companyData = companies[`${company}`];
-   useEffect(() => {
-    if (companyData?.styles) {
-      const root = document.documentElement;
-      Object.entries(companyData.styles).forEach(([property, value]) => {
-        root.style.setProperty(property, value);
-      });
-    }
-    return () => {
-      if (companyData?.styles) {
-        Object.keys(companyData.styles).forEach((property) => {
-          document.documentElement.style.removeProperty(property);
-        });
-      }
-    };
-  }, [companyData]);
-  if (!companyData) return <NotFound />;
   return (
     <>
       <LangRedirect />
@@ -154,7 +135,7 @@ const LayoutWrapper = () => {
 const App = () => {
   const router = createBrowserRouter([
     {
-      path: "/:company",
+      path: "/",
       element: <LayoutWrapper />,
       children: [
         { index: true, element: <Overview /> },
